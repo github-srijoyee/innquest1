@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="content flex_space">
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+                <h1 class="name">Inn<span class="name1">Quest</span></h1>
+            </div>
+            <div class="navlinks">
+                <ul id="menulist">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#rooms">Hotels</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#updates">Updates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><i class="fa fa-search" aria-hidden="true"></i></li>
+                    <li><button class="primary-btn">Book Now</button></li>
+                </ul>
+                <span class="fa fa-bars" onclick="menutoggle()"></span>
+            </div>
+        </div>
+    </header>
+    <script>
+        var menulist=document.getElementById('menulist');
+menulist.style.maxHeight="0px";
+
+function menutoggle(){
+    if(menulist.style.maxHeight=="0px"){
+        menulist.style.maxHeight="100vh";
+    }else{
+        menulist.style.maxHeight="0px";
+    }
+}
+    </script>
+<section class="home" id="home">
+    <div class="content">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img src="https://images.pexels.com/photos/2319426/pexels-photo-2319426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <div class="text">
+                <h1>Welcome to InnQuest</h1>
+            <p>Enjoy your vacation with us!</p>
+            <div class="flex">
+                <button class="primary-btn">
+                    Know More
+                </button>
+                <button class="secondary-btn">
+                    Contact Us
+                </button>
+            </div>
+            </div>
+            </div>
+            <div class="item">
+                <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <div class="text">
+                <h1>Welcome to InnQuest</h1>
+            <p>Enjoy your vacation with us!</p>
+            <div class="flex">
+                <button class="primary-btn">
+                    Know More
+                </button>
+                <button class="secondary-btn">
+                    Contact Us
+                </button>
+            </div>
+            </div>
+            </div>
+            <div class="item">
+                <img src="https://images.pexels.com/photos/12893063/pexels-photo-12893063.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <div class="text">
+                <h1>Welcome to InnQuest</h1>
+            <p>Enjoy your vacation with us!</p>
+            <div class="flex">
+                <button class="primary-btn">
+                    Know More
+                </button>
+                <button class="secondary-btn">
+                    Contact Us
+                </button>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:0,
+    nav:true,
+    dots:false,
+    navText:["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+    responsive:{
+        0:{
+            items:1
+        },
+        768:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+</script>
+<section class="book">
+    <div class="container flex_space">
+        <div class="text">
+            <h1><span>Book</span> Rooms Now</h1>
+        </div>
+        <div class="forms">
+            <form class="grid">
+                <input type="date" placeholder="Check In Date">
+                <input type="date" placeholder="Check Out Date">
+                <input type="number" placeholder="Rooms">
+                <input type="number" placeholder="Adults">
+                <input type="number" placeholder="Children">
+                <input type="submit" value="Check Availability">
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="about top" id="about">
+    <div class="container">
+<div class="left">
+    <div class="heading">
+        <h1>WELCOME</h1>
+        <h2>Who we are?</h2>
+    </div>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Nihil praesentium cumque voluptatibus natus voluptate nam 
+        porro ullam molestiae sit iusto? Quod autem placeat itaque 
+        deserunt consequuntur nisi, reprehenderit reiciendis impedit 
+        sapiente est consequatur vero, sed inventore. Esse minima ipsum reiciendis labore tempora? Molestias commodi fugit facilis possimus. Dolorem deleniti itaque aliquid libero ipsam. Aliquid ad, maxime eum ipsam assumenda laudantium fuga dolore enim est quam tenetur. A rem quidem similique delectus quo, nulla, eligendi commodi ut minus adipisci assumenda explicabo modi deserunt eum quasi praesentium autem error blanditiis fugit maiores. Sequi dolore ex quasi recusandae ipsam nobis numquam vel quam?
+    </p>
+    <button class="primary-btn">About us</button>
+</div>
+<div class="right">
+    <img src="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+</div>
+    </div>
+</section>
+<section class="counter top">
+    <div class="container grid">
+        <div class="box">
+            <h1>2500+</h1>
+            <hr>
+            <span>Customers</span>
+        </div>
+        <div class="box">
+            <h1>2000+</h1>
+            <hr>
+            <span>Happy Customers</span>
+        </div>
+        <div class="box">
+            <h1>500+</h1>
+            <hr>
+            <span>Employess</span>
+        </div>
+        <div class="box">
+            <h1>150+</h1>
+            <hr>
+            <span>Hotels Involved</span>
+        </div>
+    </div>
+</section>
+<section class="rooms" id="rooms">
+    <div class="container top">
+<div class="heading">
+    <h1>EXPLORE</h1>
+    <h2>Our hotels</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+</div>
+<div class="content mtop">
+    <div class="owl-carousel owl-carousel1 owl-theme">
+<div class="items">
+    <div class="image">
+        <img src="images/hotel.jpg" alt="">
+    </div>
+    <div class="text">
+        <h2>Hotel Deluxe</h2>
+        <div class="rate">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eius aut unde alias, quidem excepturi voluptates fuga quaerat sequi illum!</p>
+        <div class="button flex">
+            <button class="primary-btn">Book Now</button>
+            <h3>Rs.3000 <span> <br> Per Night </span></h3>
+            </div>
+        </div>
+    </div>
+<div class="items">
+        <div class="image">
+            <img src="https://images.pexels.com/photos/2290753/pexels-photo-2290753.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+        </div>
+        <div class="text">
+            <h2>Royal Hotel</h2>
+            <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eius aut unde alias, quidem excepturi voluptates fuga quaerat sequi illum!</p>
+            <div class="button flex">
+                <button class="primary-btn">Book Now</button>
+                <h3>Rs.3000 <span> <br> Per Night </span></h3>
+                </div>
+            </div>
+    </div>
+<div class="items">
+            <div class="image">
+                <img src="https://images.pexels.com/photos/167533/pexels-photo-167533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            </div>
+            <div class="text">
+                <h2>Hansh Residency</h2>
+                <div class="rate flex">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eius aut unde alias, quidem excepturi voluptates fuga quaerat sequi illum!</p>
+                <div class="button flex">
+                    <button class="primary-btn">Book Now</button>
+                    <h3>Rs.3000 <span> <br> Per Night </span></h3>
+                    </div>
+                </div>
+    </div>
+<div class="items">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/3144580/pexels-photo-3144580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <div class="text">
+                    <h2>Rose Hotel</h2>
+                    <div class="rate flex">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eius aut unde alias, quidem excepturi voluptates fuga quaerat sequi illum!</p>
+                    <div class="button flex">
+                        <button class="primary-btn">Book Now</button>
+                        <h3>Rs.3000 <span> <br> Per Night </span></h3>
+                        </div>
+                    </div>
+    </div>
+<div class="items">
+                    <div class="image">
+                        <img src="https://images.pexels.com/photos/1638341/pexels-photo-1638341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>Hotel Star</h2>
+                        <div class="rate flex">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eius aut unde alias, quidem excepturi voluptates fuga quaerat sequi illum!</p>
+                        <div class="button flex">
+                            <button class="primary-btn">Book Now</button>
+                            <h3>Rs.3000 <span> <br> Per Night </span></h3>
+                            </div>
+                        </div>
+    </div>
+<div class="items">
+                        <div class="image">
+                            <img src="https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                        </div>
+                        <div class="text">
+                            <h2>Beach Resort</h2>
+                            <div class="rate flex">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eius aut unde alias, quidem excepturi voluptates fuga quaerat sequi illum!</p>
+                            <div class="button flex">
+                                <button class="primary-btn">Book Now</button>
+                                <h3>Rs.3000 <span> <br> Per Night </span></h3>
+                                </div>
+                            </div>
+    </div>
+<div class="items">
+                            <div class="image">
+                                <img src="https://images.pexels.com/photos/685766/pexels-photo-685766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                            </div>
+                            <div class="text">
+                                <h2>Hillview Residency</h2>
+                                <div class="rate flex">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eius aut unde alias, quidem excepturi voluptates fuga quaerat sequi illum!</p>
+                                <div class="button flex">
+                                    <button class="primary-btn">Book Now</button>
+                                    <h3>Rs.3000 <span> <br> Per Night </span></h3>
+                                    </div>
+                                </div>
+    </div>
+<div class="items">
+                                <div class="image">
+                                    <img src="https://images.pexels.com/photos/2883047/pexels-photo-2883047.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                                </div>
+                                <div class="text">
+                                    <h2>Wonderland</h2>
+                                    <div class="rate flex">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eius aut unde alias, quidem excepturi voluptates fuga quaerat sequi illum!</p>
+                                    <div class="button flex">
+                                        <button class="primary-btn">Book Now</button>
+                                        <h3>Rs.3000 <span> <br> Per Night </span></h3>
+                                        </div>
+                                    </div>
+</div>
+<div class="items">
+                                    <div class="image">
+                                        <img src="https://images.pexels.com/photos/1438834/pexels-photo-1438834.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <h2>Woodland Residency</h2>
+                                        <div class="rate flex">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eius aut unde alias, quidem excepturi voluptates fuga quaerat sequi illum!</p>
+                                        <div class="button flex">
+                                            <button class="primary-btn">Book Now</button>
+                                            <h3>Rs.3000 <span> <br> Per Night </span></h3>
+                                            </div>
+                                        </div>
+    </div>
+<div class="items">
+                                        <div class="image">
+                                            <img src="https://images.pexels.com/photos/18705631/pexels-photo-18705631/free-photo-of-wooden-house-in-village.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <h2>Ghorey Bairey</h2>
+                                            <div class="rate flex">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eius aut unde alias, quidem excepturi voluptates fuga quaerat sequi illum!</p>
+                                            <div class="button flex">
+                                                <button class="primary-btn">Book Now</button>
+                                                <h3>Rs.3000 <span> <br> Per Night </span></h3>
+                                                </div>
+                                            </div>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+</section>
+<script>
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:40,
+    nav:true,
+    dots:false,
+    navText:["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+    responsive:{
+        0:{
+            items:1
+        },
+        768:{
+            items:2,
+            margin:10,
+        },
+        1000:{
+            items:3
+        }
+    }
+})
+</script>
+
+<section class="gallery" id="gallery">
+    <div class="container top">
+        <div class="heading">
+            <h1>Photos</h1>
+            <h2>Our Gallery</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, est.</p>
+        </div>
+    <div class="content mtop">
+        <div class="owl-carousel owl-carousel1 owl-theme">
+            <div class="items">
+                <div class="img">
+                    <img src="https://images.pexels.com/photos/6127330/pexels-photo-6127330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <div class="overlay">
+                    <span class="fa fa-plus"></span>
+                    <h3>Photo Title Here.</h3>
+                </div>
+            </div>
+            <div class="items">
+                <div class="img">
+                    <img src="https://images.pexels.com/photos/1115225/pexels-photo-1115225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <div class="overlay">
+                    <span class="fa fa-plus"></span>
+                    <h3>Photo Title Here.</h3>
+                </div>
+            </div>
+            <div class="items">
+                <div class="img">
+                    <img src="https://images.pexels.com/photos/2952663/pexels-photo-2952663.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                </div>
+                <div class="overlay">
+                    <span class="fa fa-plus"></span>
+                    <h3>Photo Title Here.</h3>
+                </div>
+            </div>
+            <div class="items">
+                <div class="img">
+                    <img src="https://images.pexels.com/photos/1591361/pexels-photo-1591361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <div class="overlay">
+                    <span class="fa fa-plus"></span>
+                    <h3>Photo Title Here.</h3>
+                </div>
+            </div>
+            <div class="items">
+                <div class="img">
+                    <img src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <div class="overlay">
+                    <span class="fa fa-plus"></span>
+                    <h3>Photo Title Here.</h3>
+                </div>
+            </div>
+            <div class="items">
+                <div class="img">
+                    <img src="https://images.pexels.com/photos/2844474/pexels-photo-2844474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <div class="overlay">
+                    <span class="fa fa-plus"></span>
+                    <h3>Photo Title Here.</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<script>
+    $('.owl-carousel1').owlCarousel({
+    loop:true,
+    margin:0,
+    nav:true,
+    dots:false,
+    autoplay:true,
+    autoplayTimeout:1000,
+    autoplayHoverPause:true,
+    navText:["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+    responsive:{
+        0:{
+            items:1
+        },
+        768:{
+            items:4,
+        },
+        1000:{
+            items:6
+        }
+    }
+})
+</script>
+
+<div class="services top">
+    <div class="container">
+        <div class="heading">
+            <h1>SERVICES</h1>
+            <h2>Why choose us?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quos?</p>   
+        </div>
+        <div class="content flex_space">
+            <div class="left grid2">
+                <div class="box">
+                    <div class="text">
+                        <i class="fa-solid fa-spa"></i>
+                        <h3>Beauty Treatment</h3>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text">
+                        <i class="fa-solid fa-champagne-glasses"></i>
+                        <h3>Delicious Food</h3>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text">
+                        <i class="fa-solid fa-person-biking"></i>
+                        <h3>Fitness & Gym</h3>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text">
+                        <i class="fa-solid fa-utensils"></i>
+                        <h3>Dine-In Facilities</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <img src="https://images.pexels.com/photos/2034335/pexels-photo-2034335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="Customer top">
+    <div class="container">
+        <h3 class="text1">What our clients say?</h3>
+        <div class="owl-carousel owl-carousel2 owl-theme">
+<div class="item">
+    <i class="fa-solid fa-quote-right"></i>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae eos ex atque quis modi, in, distinctio sint earum, fugiat corporis totam fugit eum! Dolorum culpa aliquam distinctio vero, quod dignissimos quidem. Facere quaerat dolor sed quibusdam incidunt corrupti suscipit? Numquam magni vel est repellendus inventore alias sunt, repudiandae nesciunt dolor!</p>
+<h3>Alice Watson</h3>
+<label>Alice Watson</label>
+</div>
+<div class="item">
+    <i class="fa-solid fa-quote-right"></i>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab quos ipsum tenetur veniam fugiat officiis blanditiis voluptatum corrupti, voluptates facere hic. Necessitatibus aut qui consectetur repellendus optio consequatur voluptatum maxime, eaque quam sint dolor nisi fugit repellat vero obcaecati, ut numquam inventore excepturi mollitia ex earum praesentium aperiam recusandae. Necessitatibus!</p>
+<h3>Alice Watson</h3>
+<label>Alice Watson</label>
+</div>
+<div class="item">
+    <i class="fa-solid fa-quote-right"></i>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, eveniet quis vel similique nobis sapiente, cumque ea nam explicabo odio veniam velit cupiditate pariatur corrupti dolor rem neque provident praesentium temporibus. Rerum assumenda dolorem, earum reiciendis sunt dicta explicabo. Quo, nulla harum. Nulla labore, culpa laudantium quis voluptatibus corporis velit!</p>
+<h3>Alice Watson</h3>
+<label>Alice Watson</label>
+</div>
+        </div>
+    </div>
+</section>
+<script>
+    $('.owl-carousel2').owlCarousel({
+    loop:true,
+    margin:0,
+    nav:false,
+    dots:true,
+    navText:["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+    responsive:{
+        0:{
+            items:1
+        },
+        768:{
+            items:1,
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+</script>
+
+<section class="news top rooms" id="updates">
+    <div class="container">
+        <div class="heading">
+            <h1>UPDATES</h1>
+            <h2>Our Updates</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus doloribus odit, illo ullam accusantium totam blanditiis corrupti modi omnis non voluptates doloremque quis! Fugiat doloribus delectus perspiciatis. Quae labore repellendus, tempore nostrum doloribus accusantium, nam aliquam, tempora neque ratione quisquam ducimus temporibus pariatur dolor minus voluptates dolore a ex corporis?</p>
+        </div>
+        <div class="content flex">
+            <div class="left grid3">
+                <div class="items">
+                    <div class="image">
+                        <img src="https://images.pexels.com/photos/3403098/pexels-photo-3403098.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>Lorem, ipsum dolor.</h2>
+                        <div class="admin">
+                            <i class="fa fa-user"></i>
+                            <label>Admin</label>
+                            <i class="fa fa-heart"></i>
+                            <label>500</label>
+                            <i class="fa fa-comments"></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, iusto.</p>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="image">
+                        <img src="https://images.pexels.com/photos/2421294/pexels-photo-2421294.jpeg?auto=compress&cs=tinysrgb&w=400" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>Lorem, ipsum dolor.</h2>
+                        <div class="admin">
+                            <i class="fa fa-user"></i>
+                            <label>Admin</label>
+                            <i class="fa fa-heart"></i>
+                            <label>500</label>
+                            <i class="fa fa-comments"></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, iusto.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="box flex">
+                    <div class="img">
+                        <img src="https://images.pexels.com/photos/243076/pexels-photo-243076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    </div>
+                    <div class="stext">
+                        <h2>sit amet consectetur.</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, adipisci?</p>
+                    </div>
+                </div>
+                <div class="box flex">
+                    <div class="img">
+                        <img src="https://images.pexels.com/photos/2087391/pexels-photo-2087391.jpeg?auto=compress&cs=tinysrgb&w=400" alt="">
+                    </div>
+                    <div class="stext">
+                        <h2>sit amet consectetur.</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, adipisci?</p>
+                    </div>
+                </div>
+                <div class="box flex">
+                    <div class="img">
+                        <img src="https://images.pexels.com/photos/1822608/pexels-photo-1822608.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    </div>
+                    <div class="stext">
+                        <h2>sit amet consectetur.</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, adipisci?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="newsletter mtop" id="contact">
+<div class="container flex_space">
+    <h1>Subscribe to our Newsletter</h1>
+    <input type="text" placeholder="Your Email">
+    <input type="text" name="" value="Subscribe">
+</div>
+</section>
+
+<footer>
+    <div class="container grid">
+        <div class="box">
+            <img src="images/logo.png" alt="">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio maxime ipsam rem sapiente sint corrupti nisi veniam, similique, nesciunt facere maiores alias dolorem corporis? Quisquam explicabo dolore suscipit voluptatem ipsam, labore, assumenda perferendis fuga exercitationem soluta ullam, dolor nam ipsa debitis molestiae magni veniam corrupti illum cupiditate minus veritatis excepturi?</p>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+        <div class="box">
+            <h2>Links</h2>
+            <ul>
+                <li>Company History</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+                <li>Services</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+        <div class="box">
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quae.</p>
+            <br>
+        <i class="fa fa-location-dot"></i>
+        <label>ABC Road,XYZ,Kolkata</label>
+        <br>
+        <i class="fa fa-phone"></i>
+        <label>(+91) 4444 4444</label>
+        <br>
+        <i class="fa fa-envelope"></i>
+        <label>xyz123@gmail.com</label>
+        </div>
+    </div>
+</footer>
+
+<div class="legal">
+    <p class="container">&copy; Srijoyee 2024.All rights reserved.</p>
+</div>
+</body>
+
+</html>
